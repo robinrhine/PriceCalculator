@@ -1,0 +1,167 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"  xmlns:core="sap.ui.core">
+	<Dialog  beforeOpen= "onBeforOpenActivity"  title="{i18n>Activity}" 
+			stretchOnPhone="true" 
+			stretch="false" 
+			contentWidth="95%"
+			contentHeight="95%">
+		<beginButton>
+			<Button visible="true" icon="sap-icon://bed" id="btnActivity" enabled="false" type="Emphasized" text="Confirm Activity" press="onConfirmActivity"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>Cancel}" type="Reject" press="_handleValueHelpCloseForActivity" />
+		</endButton>
+			
+		<content>
+			<l:Grid defaultSpan="L6 M6 S12" class="sapUiSmallMarginTop">
+										<l:content>
+											
+											<VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Origin"  titleActive="false" titlePress="titleClicked"/>
+												<Input
+													id="inputActivityDestination"
+													type="Text"
+													placeholder="Origin" />
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+										    </VBox>
+										    <VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Activity"  titleActive="false" titlePress="titleClicked"/>
+												<Input
+													id="inputActivity"
+													type="Text"
+													placeholder="Activity Name" />
+												<layoutData>
+													<l:GridData span="L12 M12 S12" />
+												</layoutData>
+										    </VBox>
+										     <VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Price for Adult"  titleActive="false" titlePress="titleClicked"/>
+												<Input
+													id="inputActivityAdultPrice"
+													type="Number"
+													liveChange="onLiveChangeActivityAdultPrice"
+													placeholder="Price" />
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+										    </VBox>
+										    <VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Adult"  titleActive="false" titlePress="titleClicked"/>
+												<StepInput id="inputActivityAdult" change="onChangeActivityAdultNumber"
+												value="1"
+												min = "1" max = "50" 
+												/>
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+										    </VBox>
+										   
+										    
+										    
+										    <VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Price for Child"  titleActive="false" titlePress="titleClicked"/>
+												<Input
+													id="inputActivityChildPrice"
+													liveChange="onLiveChangeActivityChildPrice"
+													type="Number"
+													placeholder="Price" />
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+										    </VBox>
+										    <VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Child"  titleActive="false" titlePress="titleClicked"/>
+												<StepInput id="inputActivityChild" change="onChangeActivityChildNumber"
+												value="0"
+												min = "0" max = "50" 
+												/>
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+										    </VBox>
+										     <VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Duration"  titleActive="false" titlePress="titleClicked"/>
+												
+												<Input
+													id="inputActivityDuration"
+													type="Text"
+													placeholder="Duration" />
+												
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+										    </VBox>
+										    
+										    <VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Options"  titleActive="false" titlePress="titleClicked"/>
+												
+												<Input
+													id="inputActivityOptions"
+													type="Text"
+													placeholder="Options" />
+												
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+										    </VBox>
+										    <VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Pick Up Date Time"  titleActive="false" titlePress="titleClicked"/>
+												<DateTimePicker
+													id="inputActivitypickupdatetime"
+													minutesStep="15"
+													displayFormat="dd, MMMM ,yyyy, HH:mm"
+													valueFormat="dd, MMMM ,yyyy, HH:mm"
+													placeholder="Enter Date ..."
+													change="handleChange"
+													/>
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+											</VBox>
+											<VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Pick Up Zone"  titleActive="false" titlePress="titleClicked"/>
+												<Input
+													id="inputActivityPickupzone"
+													type="Text"
+													placeholder="Pick up zone" />
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+											</VBox>
+											
+											
+											<VBox class="sapUiTinyMarginTop">
+												<ObjectIdentifier title="Total Price"  titleActive="false" titlePress="titleClicked"/>
+												
+												<Input
+													id="inputActivityTotalPrice" enabled="false"
+													type="Number"
+													placeholder="Total Price" />
+												
+												<layoutData>
+													<l:GridData span="L6 M6 S12" />
+												</layoutData>
+										    </VBox>
+										    
+										    <VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Remarks"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputActivityRemarks"
+												type="Text"
+												placeholder="Remarks" />
+											<layoutData>
+												<l:GridData span="L12 M12 S12" />
+											</layoutData>
+										</VBox>
+										
+											
+											
+											
+											
+										</l:content>
+								</l:Grid>
+			
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

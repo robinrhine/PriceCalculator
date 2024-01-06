@@ -1,0 +1,212 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"  xmlns:core="sap.ui.core">
+	<Dialog  beforeOpen="onBeforOpenFlight"  title="{i18n>Flight  Details}" 
+			stretchOnPhone="true" 
+			stretch="false" 
+			contentWidth="95%"
+			contentHeight="95%">
+		<beginButton>
+			<Button visible="true" icon="sap-icon://bed"  enabled="true" type="Emphasized" text="Confirm Flight" press="onConfirmFlight"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>Cancel}" type="Reject" press="_handleValueHelpCloseForFlight" />
+		</endButton>
+			
+		<content>
+			
+			<l:Grid defaultSpan="L6 M6 S12" class="sapUiSmallMarginTop">
+									<l:content>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Origin"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputFlightOrigin"
+												type="Text"
+												placeholder="Origin " />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Destination"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputFlightDestination"
+												type="Text"
+												placeholder="Destination " />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Departure Date"  titleActive="false" titlePress="titleClicked"/>
+											<DateTimePicker
+													id="inputFlightDepartureDateTime"
+													minutesStep="15"
+													displayFormat="dd, MMMM ,yyyy, HH:mm"
+													valueFormat="dd, MMMM ,yyyy, HH:mm"
+													placeholder="Enter Date ..."
+													change="handleChange"
+													/>
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Return Date"  titleActive="false" titlePress="titleClicked"/>
+											<DateTimePicker
+													id="inputFlightReturnDateTime"
+													minutesStep="15"
+													displayFormat="dd, MMMM ,yyyy, HH:mm"
+													valueFormat="dd, MMMM ,yyyy, HH:mm"
+													placeholder="Enter Date ..."
+													change="handleChange"
+													/>
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Departure Flight No"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputDepartureFlightNumber"
+												type="Text"
+												placeholder="Flight No" />
+											<layoutData>
+													<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Return Flight No"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputReturnFlightNumber"
+												type="Text"
+												placeholder="Flight No" />
+											<layoutData>
+													<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Number Of Adult"  titleActive="false" titlePress="titleClicked"/>
+											<StepInput id="inputFlightAdult" change="onChangeFlightNoOfAdult" enabled="true"
+												value="1"
+												min = "1" max = "50" 
+												/>
+											<layoutData>
+													<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Unit Price"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputFlightAdultPrice"
+												type="Number"
+												value="0"
+												liveChange="onChangeFlightAdultUnitPrice"
+												 />
+											<layoutData>
+													<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="No of Child"  titleActive="false" titlePress="titleClicked"/>
+											<StepInput id="inputFlightChild" change="onChangeFlightNoOfChild" enabled="true"
+												value="0"
+												min = "0" max = "50" 
+												/>
+											<layoutData>
+													<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Unit Price"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputFlightChildPrice"
+												type="Number"
+												value="0"
+												liveChange="onChangeFlightChildUnitPrice"
+												 />
+											<layoutData>
+													<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="No of Infant"  titleActive="false" titlePress="titleClicked"/>
+											<StepInput id="inputFlightInfant" change="onChangeFlightNoOfInfant" enabled="true"
+												value="0"
+												min = "0" max = "50" 
+												/>
+											<layoutData>
+													<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Unit Price"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputFlightInfantPrice"
+												type="Number"
+												value="0"
+												liveChange="onChangeFlightInfantUnitPrice"
+												 />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Carrier Name"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputFlightCarrrierName"
+												type="Text"
+												
+												placeholder="Carrier Name" />
+											<layoutData>
+													<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Total Price"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputFlightTotalPrice"
+												type="Number"
+												enabled="false" />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Remarks"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputFlightRemarks"
+												type="Text"
+												placeholder="Remarks" />
+											<layoutData>
+												<l:GridData span="L12 M12 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										
+									</l:content>
+								</l:Grid>
+			
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

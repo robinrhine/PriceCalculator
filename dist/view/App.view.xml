@@ -1,0 +1,14 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="plentyHolidays.controller.App"
+	displayBlock="true"
+	xmlns="sap.m">
+
+	<App id="app"
+		 busy="{appView>/busy}"
+		 backgroundColor="#FFFFFF"
+		 backgroundImage="https://upload.wikimedia.org/wikipedia/commons/b/b1/Laser_Towards_Milky_Ways_Centre_Wallpaper.jpg1111"
+		 backgroundRepeat="true"
+		 busyIndicatorDelay="{appView>/delay}"/>
+
+</mvc:View>

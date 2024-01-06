@@ -1,0 +1,38 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	
+  <Dialog id="dialogFreeDay" beforeOpen="onBeforOpenFreeDay" stretch="{= ${device>/system/phone}}"  contentWidth="30%" contentHeight="70%"    title="Free Day" showHeader="true" >
+  <buttons> 
+  	  <Button  text="Confirm" type="Accept"  press="onConfirmFreeday"/>
+  	  
+      <Button  text="Cancel" type="Reject"  press="_handleValueHelpCloseForFreeday"/>
+  </buttons>
+		<content>
+			  
+			   
+		
+			 <f:SimpleForm  >
+						
+									<f:content>
+									<Label  text="Date"/>
+									<DatePicker
+									id="FreedayDP1"
+									placeholder="Enter Date ..."
+									change="handleChange"
+									class="sapUiSmallMarginBottom"/>
+									
+									
+									<Label  text="Suggestions"/>
+									<TextArea  	id="InputFreedaySuggestions" placeholder="Enter Text" growing="true" growingMaxLines="15" width="100%"/>
+									
+										
+									</f:content>
+								</f:SimpleForm>
+				
+		</content>
+</Dialog>
+
+	
+</core:FragmentDefinition>

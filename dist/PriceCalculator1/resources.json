@@ -1,0 +1,135 @@
+{
+    "resources": [
+        {
+            "name": "../view/Flight.fragment.xml"
+        },
+        {
+            "name": "../libs/jspdf.min.js"
+        },
+        {
+            "name": "../model/models.js"
+        },
+        {
+            "name": "../model/formatter.js"
+        },
+        {
+            "name": "../libs/jspdf.plugin.autotable.js"
+        },
+        {
+            "name": "../manifest.json"
+        },
+        {
+            "name": "../controller/Main.controller.js"
+        },
+        {
+            "name": "../controller/Invoice.controller.js"
+        },
+        {
+            "name": "../controller/BaseController.js"
+        },
+        {
+            "name": "../controller/App.controller.js"
+        },
+        {
+            "name": "../Component.js"
+        },
+        {
+            "name": "../manifest-bundle.zip"
+        },
+        {
+            "name": "../Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "../controller/Main-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../model/formatter-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../libs/jspdf.plugin.autotable-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../libs/jspdf.min-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../model/models-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../controller/Invoice-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../controller/BaseController-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../controller/App-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../sap-ui-version.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "../view/pdf.html"
+        },
+        {
+            "name": "../view/Visa.fragment.xml"
+        },
+        {
+            "name": "../view/Transfer.fragment.xml"
+        },
+        {
+            "name": "../view/PdfViewerDialog.fragment.xml"
+        },
+        {
+            "name": "../view/Main.view.xml"
+        },
+        {
+            "name": "../view/Invoice.view.xml"
+        },
+        {
+            "name": "../view/Hotel.fragment.xml"
+        },
+        {
+            "name": "../view/Freeday.fragment.xml"
+        },
+        {
+            "name": "../i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "../view/CustomerInfo.fragment.xml"
+        },
+        {
+            "name": "../view/App.view.xml"
+        },
+        {
+            "name": "../view/Activity.fragment.xml"
+        },
+        {
+            "name": "../images/plenty-holidays-logo.png"
+        },
+        {
+            "name": "../css/style.css"
+        },
+        {
+            "name": "../index.html"
+        }
+    ]
+}
