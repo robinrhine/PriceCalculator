@@ -1,0 +1,93 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	
+  <Dialog id="dialogCustomerInfo" stretch="{= ${device>/system/phone}}"  contentWidth="30%" contentHeight="70%"    title="Customer Information" showHeader="true" >
+  <buttons> 
+  	  <Button id="btnSaveNewNotification" text="Proceed to Invoice" type="Accept"  press="onProceedToInvoice"/>
+  	  
+      <Button id="btnCloseNewNotification" text="Cancel" type="Reject"  press="onCloseCustomerInfo"/>
+  </buttons>
+		<content>
+			  
+			   
+		
+			 <f:SimpleForm  >
+						
+									<f:content>
+									<Label  text="Customer Name"/>
+									<Input
+										id="inputCustomerName"
+										class="sapUiSmallMarginBottom"
+										type="Text"
+										placeholder="Customer  Name"
+										enabled="true"
+										editable="true"
+										
+									/>
+									
+									
+									<Label  text="Address"/>
+									<Input
+									id="Inputcustomeraddress"
+									type="Text"
+									placeholder="Address"	/>
+										
+								
+									<Label  text="Email Address"/>
+									<Input
+									id="Inputcustomeremailaddress"
+									type="Text"
+									placeholder="Email Address"	/>
+									<Label  text="Customer Contact Number"/>
+									<Input
+									id="Inputcustomercontactnumber"
+									type="Text"
+									placeholder="Contact number"	/>
+									
+									<Label  text="Discount"/>
+									<Input
+									id="Inputcustomerdiscount"
+									type="Number"
+									value="0"
+									placeholder="Input Number"	/>
+									
+									
+									<Label  text="Trip Name"/>
+									<Input
+									id="Inputcustomertripname"
+									type="Text"
+									placeholder="Input Trip Name"	/>
+									
+									<Label  text="Number of Adult"/>
+									<StepInput id="inputnumberofadult" 
+												value="1"
+												min = "1" max = "50" 
+									/>	
+									
+									<Label  text="Child"/>
+									<StepInput id="inputnumberofchild" 
+												value="0"
+												min = "0" max = "50" 
+												/>
+									<Label  text="Infant"/>
+									<StepInput id="inputnumberofinfant" 
+												value="0"
+												min = "0" max = "50" 
+												/>
+									
+									
+									</f:content>
+								</f:SimpleForm>
+				
+						
+			 
+			 
+			 
+			
+		</content>
+</Dialog>
+
+	
+</core:FragmentDefinition>

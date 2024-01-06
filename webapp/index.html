@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>Price Calculator</title>
+
+		<script id="sap-ui-bootstrap"
+			src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_fiori_3"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots ='{"plentyHolidays": ""}'>
+		</script>
+		
+		
+		
+		
+	<!--script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+	<script src="https://simonbengtsson.github.io/jsPDF-AutoTable/dist/jspdf.plugin.autotable.js"></script!-->
+	
+	<script src="libs/jspdf.min.js"></script>
+	<script src="libs/jspdf.plugin.autotable.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					showLogout:false,
+					backgroundColor:'#b2d4f5',
+					appWidthLimited:false,
+					app: new sap.ui.core.ComponentContainer({
+						
+						height : "100%",
+						name : "plentyHolidays"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

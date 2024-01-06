@@ -1,0 +1,130 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"  xmlns:core="sap.ui.core">
+	<Dialog  beforeOpen="onBeforOpenTransfer"  title="{i18n>Transfer}" 
+			stretchOnPhone="true" 
+			stretch="false" 
+			contentWidth="95%"
+			contentHeight="95%">
+		<beginButton>
+			<Button visible="true" icon="sap-icon://car-rental" id="btnTransfer"  type="Emphasized" text="Confirm Transfer" press="onConfirmTransfer"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>Cancel}" type="Reject" press="_handleValueHelpCloseForTransfer" />
+		</endButton>
+			
+		<content>
+			
+			<l:Grid defaultSpan="L6 M6 S12" class="sapUiSmallMarginTop">
+										<l:content>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="From"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputTransferFrom"
+												type="Text"
+												placeholder="From" />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="To"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputTransferTo"
+												type="Text"
+												placeholder="To" />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Type of Vehicle"  titleActive="false" titlePress="titleClicked"/>
+											<Select id="inputTransferVeichleType" width="100%"
+												forceSelection="false"
+												selectedKey="car">
+												<core:Item key="car" text="Car" />
+												<core:Item key="Van" text="Van" />
+											</Select>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Nubmer of Vehicle"  titleActive="false" titlePress="titleClicked"/>
+											<StepInput id="inputTransferNumberofVechile" change="onChangeVeichle"
+												value="1"
+												min = "1" max = "50" 
+												/>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Price"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputTransferPrice"
+												liveChange="onLiveChnageTransferPrice"
+												type="Number"
+												placeholder="Price" />
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Pick Up Time"  titleActive="false" titlePress="titleClicked"/>
+											<DateTimePicker
+												id="inputTransferpickupdatetime"
+												minutesStep="15"
+												displayFormat="dd, MMMM ,yyyy, HH:mm"
+												valueFormat="dd, MMMM ,yyyy, HH:mm"
+												placeholder="Enter Date ..."
+												change="handleChangeForTransferDate"
+												/>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Pick Up Zone"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputTransferPickupzone"
+												type="Text"
+												placeholder="Pick up zone" />
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Total Price"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputTransferTotalPrice" enabled="false"
+												type="Number"
+												placeholder="Total Price" />
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Remarks"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputTransferRemarks"
+												type="Text"
+												placeholder="Remarks" />
+											<layoutData>
+												<l:GridData span="L12 M12 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										
+										</l:content>
+								</l:Grid>
+			
+			
+			
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

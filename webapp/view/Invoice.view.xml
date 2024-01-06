@@ -1,0 +1,154 @@
+<mvc:View
+	controllerName="plentyHolidays.controller.Invoice"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:l="sap.ui.layout">
+
+	<Page
+		id="page"
+		navButtonPress="onNavBack"
+		showNavButton="true"
+		title="{i18n>Invoice}">
+		<content>
+			<html:div id="editor">
+																
+			</html:div>
+			<l:Grid id="invoiceGrid" defaultSpan="L6 M6 S12" class="sapUiSmallMarginTop">
+			<l:content>
+							<HBox>
+								<Button id="BtnPdfInvoice" class="sapUiSmallMarginEnd" visible="false" text="Invoice PDF File" press="onCreatePDFContent"/>
+								<Button id="BtnPdfItinerary" class="sapUiSmallMarginBegin" visible="false" text="Itinerary PDF File " press="onCreatePDFContentForItinerary"/>
+								
+							</HBox>
+							
+			
+							<VBox class="sapUiTinyMarginTop">
+											
+											<layoutData>
+												<l:GridData span= "L1 M1 S12" 
+															visibleXL= "true"
+															visibleL = "true"
+															visibleM = "false"
+															visibleS = "false"/>
+											</layoutData>
+							</VBox>
+							
+							<VBox  class="sapUiTinyMarginTop">
+															<html:div style="height:40px;width:98%;background-color:#FFF;text-align:left;padding:10px;">
+																<html:img src="./images/plenty-holidays-logo.png">	</html:img>
+															</html:div>
+															
+															
+															
+															
+															<l:Grid defaultSpan="L6 M6 S12" class="sapUiSmallMarginTop">
+															<l:content>
+																<VBox>
+																				<ObjectIdentifier title="Billed To"  titleActive="false" titlePress="titleClicked"/>
+																				<Text id="txtCustomerName" text="Ahmed Erfan Habib"/>
+																				<Text id="txtCustomerAddress" text="Address"/>
+																				<Text id="txtCustomerEmail" text="Customer Email Address"/>
+																				<Text id="txtCustomerContactNumber" text="Mobile nunber"/>
+																				<layoutData>
+																					<l:GridData span= "L8 M8 S6"/>
+																				</layoutData>
+																</VBox>
+																<VBox>
+																				<ObjectIdentifier title="Plenty Holidays"  titleActive="false" titlePress="titleClicked"/>
+																				<Text text="B-107(Level-3),Road 8,New DOHS, Mohakhali,Dakha -1212"/>
+																				<Text text="support@plentyholidays.com"/>
+																				<Text text="Mobile: 01880188888"/>
+																				<Text text="www.plentyholidays.com"/>
+																				<layoutData>
+																					<l:GridData span= "L4 M4 S6"/>
+																				</layoutData>
+																</VBox>
+																
+															</l:content>
+															</l:Grid>
+															
+															
+															
+															<Table 
+																id="tblInvoice" 
+																alternateRowColors="false"
+																updateFinished="onupdateTableFinishedForTourdetails" 
+																growing="true"
+																growingScrollToLoad="true"
+																noDataText="No Data Found"  >
+																	
+																		<columns>
+																			<Column  width="99%">
+																				<Text text="Description "></Text>
+																			</Column>
+																			
+																			
+																		</columns>
+																			
+															</Table>
+															
+															<l:Grid defaultSpan="L6 M6 S12" class="sapUiSmallMarginTop">
+															<l:content>
+																<VBox>
+																				<ObjectIdentifier title="Grand Total"  titleActive="false" titlePress="titleClicked"/>
+								
+																				<ObjectAttribute text="Plenty Holidays" />
+																				<ObjectAttribute text="City Bank" />
+																				<ObjectAttribute text="230-260-266-9001" />
+																				<Label class="sapUiTinyMarginTop" text="Thank you for being with us" design="Bold"/>
+																				
+																				<layoutData>
+																					<l:GridData span= "L10 M10 S8"/>
+																				</layoutData>
+																</VBox>
+																<VBox>
+																				<ObjectIdentifier id="txtgrandTotal" title=""  titleActive="false" titlePress="titleClicked"/>
+																				<layoutData>
+																					<l:GridData span= "L2 M2 S4"/>
+																				</layoutData>
+																</VBox>
+																
+															</l:content>
+															</l:Grid>
+
+											<layoutData>
+												<l:GridData span="L10 M12 S12" />
+											</layoutData>
+							</VBox>
+							<VBox class="sapUiTinyMarginTop">
+											
+											<layoutData>
+												<l:GridData span= "L1 M1 S12" 
+															visibleXL= "true"
+															visibleL = "true"
+															visibleM = "false"
+															visibleS = "false"/>
+											</layoutData>
+							</VBox>
+							
+							
+					
+			
+			</l:content>
+			</l:Grid>
+			
+			<VBox id="TestHtml" class="sapUiTinyMargin">
+				
+				
+				
+			</VBox>
+			
+		</content>
+		
+		
+		
+		
+
+		
+
+
+	</Page>
+
+</mvc:View>

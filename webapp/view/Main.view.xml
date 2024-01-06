@@ -1,0 +1,114 @@
+<mvc:View controllerName="plentyHolidays.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.f"
+	xmlns="sap.m">
+	<!--App>
+		<pages-->
+	
+	
+	
+	<Page backgroundDesign="Transparent" title="{i18n>Price Calculator}">
+		
+	
+	<content>
+	
+		<l:Grid defaultSpan="L6 M6 S12"  class="sapUiSmallMarginTop">
+			<l:content>	
+			<VBox class="sapUiTinyMarginTop">
+												<IconTabBar
+												id="idIconTabBarMulti"
+												expanded="true"
+												expandable="true"
+												select="onSelectTabBar"
+												class="sapUiResponsiveContentPadding CustomBackGroundColor">
+												<items>
+													<IconTabFilter
+															icon="sap-icon://flight"
+															iconColor="Positive"
+															text="Flight" key="Flight">
+													</IconTabFilter>
+													<IconTabFilter
+															icon="sap-icon://bed"
+															iconColor="Negative"
+															text="Hotels" key="Hotel">
+													</IconTabFilter>
+														<IconTabFilter 
+															icon="sap-icon://car-rental"
+															iconColor="Positive"
+															text="Transfer" key="Transfer">
+															
+														</IconTabFilter>
+														<IconTabFilter
+															icon="sap-icon://physical-activity"
+															iconColor="Critical"
+															text="Activities" key="Activity">
+														</IconTabFilter>
+														
+														<!--IconTabFilter
+															icon="sap-icon://add-process"
+															iconColor="Positive"
+															text="Freedays" key="Freeday">
+														</IconTabFilter-->
+														
+														<IconTabFilter
+															icon="sap-icon://visits"
+															iconColor="Positive"
+															text="Visa" key="Visa">
+														</IconTabFilter>
+														
+														<IconTabFilter
+															icon="sap-icon://delete"
+															iconColor="Neutral"
+															text="Reset" key="Reset">
+														</IconTabFilter>
+												</items>
+											</IconTabBar>
+									
+											<Table 
+											id="tbltrip" 
+											alternateRowColors="false"
+											updateFinished="onupdateTableFinishedForTourdetails" 
+											growing="true"
+											growingScrollToLoad="true"
+											noDataText="No items Found"  >
+												
+													<columns>
+														<Column  width="98%"></Column >
+														<Column width="1%"></Column>
+														
+													</columns>
+														
+											</Table>
+								<layoutData>
+								<l:GridData span= "L12 M12 S12"/>
+								</layoutData>
+			</VBox>		
+					
+									
+					
+	
+				
+	</l:content>
+	</l:Grid>			
+		</content>			
+				
+				<footer>
+				<Toolbar>
+					
+					<ObjectAttribute id="totalCostObj"  title="Total Price" text="" />
+					<ToolbarSpacer/>
+					<Button id="btnInvoice" text="Invoice Page" type="Accept" press="onShowCusotmerInformation" visible="false"/>
+					
+				</Toolbar>
+
+		
+			
+			</footer>
+				
+				
+			</Page>
+		<!--/pages>
+	</App-->
+</mvc:View>

@@ -1,0 +1,228 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"  xmlns:core="sap.ui.core">
+	<Dialog  beforeOpen="onBeforOpenHotel"  title="{i18n>Hotel Booking Details}" 
+			stretchOnPhone="true" 
+			stretch="false" 
+			contentWidth="95%"
+			contentHeight="95%">
+		<beginButton>
+			<Button visible="true" icon="sap-icon://bed" id="btnHotel" enabled="false" type="Emphasized" text="Confirm Hotel" press="onConfirmHotel"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>Cancel}" type="Reject" press="_handleValueHelpCloseForHotel" />
+		</endButton>
+			
+		<content>
+			
+			<l:Grid defaultSpan="L6 M6 S12" class="sapUiSmallMarginTop">
+									<l:content>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Destination"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputDesctination"
+												type="Text"
+												placeholder="Destination " />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Booking Confirmation NO"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputBookingId"
+												type="Text"
+												placeholder="Hotel Booking id " />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										
+										
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Hotel Name"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputHotelName"
+												type="Text"
+												placeholder="Hotel Name" />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Hotel Address"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputhoteladdress"
+												type="Text"
+												placeholder="Hotel Address " />
+											<layoutData>
+												<l:GridData span="L6 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Room Type"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputRoomType"
+												type="Text"
+												placeholder="Room Type" />
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Room Price"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputRoomPrice"
+												type="Number"
+												liveChange="onChangeRoomPrice"
+												placeholder="Room Price" />
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Number Of Rooms"  titleActive="false" titlePress="titleClicked"/>
+											<StepInput id="inputRooms" change="onChangeInputRooms" enabled="false"
+												value="1"
+												min = "1" max = "50" 
+												/>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Extra Bed Price"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputExtraBedPrice"
+												type="Number"
+												liveChange="onChangeExtraBedPrice"
+												placeholder="Extra Bed Price" />
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Extra Bed"  titleActive="false" titlePress="titleClicked"/>
+											<StepInput id="inputExtraBeds" change="onChangeExtraBed" enabled="false"
+												value="0"
+												min = "0" max = "50" 
+												/>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										<VBox class="sapUiTinyMarginTop ">
+											<ObjectIdentifier title="Check In and Out Date"  titleActive="false" titlePress="titleClicked"/>
+											<DateRangeSelection id="DRS1" enabled="false"	delimiter="@" change="onDateSelection"></DateRangeSelection>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Number Of Nights"  titleActive="false" titlePress="titleClicked"/>
+											<Input enabled="false" id="inputNumberOfNights" type="Number"/>
+											
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Total Price"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputTotalPrice"
+												enabled="false"
+												type="Number"
+												placeholder="Total Price" />
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Number of Adult"  titleActive="false" titlePress="titleClicked"/>
+											<StepInput id="inputhotelnumberofadult" 
+												value="1"
+												min = "1" max = "50" 
+												/>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Number of Child"  titleActive="false" titlePress="titleClicked"/>
+											<StepInput id="inputhotelnumberofchild" 
+												value="0"
+												min = "0" max = "50" 
+												/>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Tentative Check In Time"  titleActive="false" titlePress="titleClicked"/>
+											<TimePicker
+												id="TP1" width="100%"
+												minutesStep="30"
+												valueFormat="HH:mm"
+												displayFormat="HH:mm"
+												change="handleChange"
+												placeholder="Enter meeting start time"/>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Tentative Check Out Time"  titleActive="false" titlePress="titleClicked"/>
+											<TimePicker
+												id="TP2" width="100%"
+												minutesStep="30"
+												valueFormat="HH:mm"
+												displayFormat="HH:mm"
+												change="handleChange"
+												placeholder="Enter meeting start time"/>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Breakfast Included"  titleActive="false" titlePress="titleClicked"/>
+											<RadioButtonGroup id="htlBreakfast" columns="5" selectedIndex="0"  class="sapUiMediumMarginBottom">
+												<RadioButton id="RB3-1" text="Yes" />
+												<RadioButton id="RB3-2" text="No" />
+												
+											</RadioButtonGroup>
+											<layoutData>
+												<l:GridData span="L4 M6 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										<VBox class="sapUiTinyMarginTop">
+											<ObjectIdentifier title="Remarks"  titleActive="false" titlePress="titleClicked"/>
+											<Input
+												id="inputHotelRemarks"
+												type="Text"
+												placeholder="Remarks" />
+											<layoutData>
+												<l:GridData span="L12 M12 S12" />
+											</layoutData>
+										</VBox>
+										
+										
+										
+									</l:content>
+								</l:Grid>
+			
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

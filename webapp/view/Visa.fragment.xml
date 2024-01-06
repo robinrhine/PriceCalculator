@@ -1,0 +1,60 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	
+  <Dialog id="dialogVisa" beforeOpen="onBeforOpenVisa" stretch="{= ${device>/system/phone}}"  contentWidth="30%" contentHeight="70%"    title="Visa service" showHeader="true" >
+  <buttons> 
+  	  <Button  text="Confirm" type="Accept"  press="onConfirmVisa"/>
+  	  
+      <Button  text="Cancel" type="Reject"  press="_handleValueHelpCloseForVisa"/>
+  </buttons>
+		<content>
+			  
+			   
+		
+			 <f:SimpleForm  >
+						
+									<f:content>
+									<Label  text="Country"/>
+									<Input
+										id="inputVisaCountryName"
+										class="sapUiSmallMarginBottom"
+										type="Text"
+										placeholder="Country  Name"
+										enabled="true"
+										editable="true"
+										
+									/>
+									
+									<Label  text="Visa Fees"/>
+									<Input
+									id="InputVisaAmount"
+									type="Number"
+									liveChange="onLiveChangeVisaFeesPrice"
+									value="0"
+									placeholder="Input Number"	/>
+									
+									
+									<Label  text="Number of Persons"/>
+									<StepInput id="inputVisanumberofadult"  change="onChangeVisaAdultNumber"
+												value="1"
+												min = "1" max = "50" 
+									/>	
+									
+									<Label  text="Total Price"/>
+									<Input
+												id="inputVisaTotalPrice"
+												enabled="false"
+												type="Number"
+												placeholder="Total Price" />
+									
+										
+									</f:content>
+								</f:SimpleForm>
+				
+		</content>
+</Dialog>
+
+	
+</core:FragmentDefinition>

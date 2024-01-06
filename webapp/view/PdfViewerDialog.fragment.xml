@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" >
+	<Dialog    title="{i18n>PDF Viewer}" 
+			stretch="true">
+		<endButton>
+			<Button text="{i18n>Close}" type="Reject" press="onCloseDialogForPDF" />
+		</endButton>
+			<!--subHeader>
+				<Toolbar>
+			<SearchField  search="_handleValueHelpSearchForVendor" width="100%" />	
+			</Toolbar>
+		</subHeader-->
+		<content>
+		</content>
+	</Dialog>
+</core:FragmentDefinition>
